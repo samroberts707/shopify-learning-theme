@@ -8,13 +8,14 @@
  * ------------------------------------------------------------
  */
  {
+  "name": "Template 404",
   "sections": {
-    "main": {
-      "type": "404",
+    "template": {
+      "type": "template-404",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "template"
   ]
 }
