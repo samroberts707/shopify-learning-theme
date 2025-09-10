@@ -5,21 +5,27 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/404
 {% endcomment %}
 
+<div class="max-w-md">
+  <div class="text-5xl font-bold my-4">
+    {{ section.settings.title }}
+  </div>
+  <div class="my-4">
+    <p class="text-base md:text-xl leading-normal">{{ section.settings.subtext_title }}</p>
+  </div>
+  <div class="my-4">
+    <a href="{{ routes.root_url }}">
+      {{ section.settings.back_button }}
+    </a>
+  </div>
+</div>
 
 
-<h1>{{ section.settings.title }}</h1>
-
-<p>
-  {{ section.settings.subtext_title }}
-</p>
-
-<a href="{{ routes.root_url }}">
-  {{ section.settings.back_button }}
-</a>
 
 {% schema %}
 {
   "name": "t:general.404",
+  "tag": "section",
+  "class": "flex  items-center justify-center text-center py-7 h-screen",
   "settings": [
     {
       "type": "text",
