@@ -7,6 +7,8 @@
     {% # Load and preload the critical CSS %}
     {{ 'tailwind.css' | asset_url | stylesheet_tag: preload: true }}
 
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
 
