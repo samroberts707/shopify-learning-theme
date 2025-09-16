@@ -1,0 +1,47 @@
+{% comment %}
+  This section is used in the article template to render the article page, which
+  displays the full content of the blog post and can optionally include a
+  comments section for customers (not shown in this example).
+
+  https://shopify.dev/docs/storefronts/themes/architecture/templates/article
+{% endcomment %}
+
+<h1>{{ article.title }}</h1>
+
+{% if article.image %}
+  {{ article.image | image_url: width: 1000 | image_tag }}
+{% endif %}
+
+{% if section.settings.enable_author %}
+  <small>{{ article.author }}</small>
+{% endif %}
+
+{% if section.settings.enable_published_date %}
+  <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%Y-%m-%d' }}</time>
+{% endif %}
+
+{% assign date = article.published_at | time_tag: format: 'date' %}
+
+<p>{{ 'blog.article_metadata_html' | t: date: date, author: article.author }}</p>
+
+{{ article.content }}
+
+{% schema %}
+{
+  "name": "t:general.article",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_author",
+      "default": true,
+      "label": "Toggle to display author name"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_published_date",
+      "default": true,
+      "label": "Toggle to display published date"
+    }
+  ]
+}
+{% endschema %}
