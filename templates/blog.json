@@ -11,7 +11,9 @@
   "sections": {
     "template": {
       "type": "template-blog",
-      "settings": {}
+      "settings": {
+        "number_of_blog_posts": 3
+      }
     }
   },
   "order": [
