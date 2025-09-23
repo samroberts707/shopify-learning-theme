@@ -2,7 +2,7 @@
     <div class="border border-gray-100 bg-white shadow-lg rounded-lg overflow-hidden">
         {% if product.featured_image %}
             {% render 'image',
-                class: 'h-80 overflow-hiden object-cover object-center transition duration-1000 ease-in-out hover:scale-105 transform',
+                class: 'w-full h-80 overflow-hiden object-cover object-center transition duration-1000 ease-in-out hover:scale-105 transform',
                 image: product.featured_image,
                 width: 1000,
                 height: 1000,
@@ -10,7 +10,7 @@
                 crop: 'center'
             %}
         {% else %}
-            {{ 'product-2' | placeholder_svg_tag: 'h-80 overflow-hiden object-cover object-center' }}
+            {{ 'product-2' | placeholder_svg_tag: 'w-full h-80 overflow-hiden object-cover object-center transition duration-1000 ease-in-out hover:scale-105 transform' }}
         {% endif %}
         <div class="flex flex-col p-4">
             <span class="block text-sm text-gray-400 uppercase">{{ product.vendor }}</span>
