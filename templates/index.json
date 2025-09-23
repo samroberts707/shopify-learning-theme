@@ -10,7 +10,11 @@
 {
   "sections": {
     "featured-collection": {
-      "type": "featured-collection"
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "summer-collection"
+      }
     }
   },
   "order": [
