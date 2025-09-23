@@ -2,7 +2,7 @@
     <div class="border border-gray-100 bg-white shadow-lg rounded-lg overflow-hidden">
         {% if product.featured_image %}
             {% render 'image',
-                class: 'h-80 overflow-hiden object-cover object-center',
+                class: 'h-80 overflow-hiden object-cover object-center transition duration-1000 ease-in-out hover:scale-105 transform',
                 image: product.featured_image,
                 width: 1000,
                 height: 1000,
