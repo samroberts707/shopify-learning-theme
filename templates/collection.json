@@ -11,7 +11,9 @@
   "sections": {
     "template": {
       "type": "template-collection",
-      "settings": {}
+      "settings": {
+        "featured_collection": "all"
+      }
     }
   },
   "order": [
