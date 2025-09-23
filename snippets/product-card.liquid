@@ -1,0 +1,21 @@
+<div class="w-full py-6 px-3">
+    <div class="border border-gray-100 bg-white shadow-lg rounded-lg overflow-hidden">
+        {% if product.featured_image %}
+            {% render 'image',
+                class: 'h-80 overflow-hiden object-cover object-center',
+                image: product.featured_image,
+                width: 1000,
+                height: 1000,
+                url: product.url,
+                crop: 'center'
+            %}
+        {% else %}
+            {{ 'product-2' | placeholder_svg_tag: 'h-80 overflow-hiden object-cover object-center' }}
+        {% endif %}
+        <div class="flex flex-col p-4">
+            <span class="block text-sm text-gray-400 uppercase">{{ product.vendor }}</span>
+            <a href="{{ product.url }}" class="block mb-3">{{ product.title }}</a>
+            <p>{{ product.price | money }}</p>
+        </div>
+    </div>
+</div>
