@@ -17,10 +17,20 @@
       "type": "contact-form",
       "name": "Contact Form",
       "settings": {}
+    },
+    "featured_collection_pdTYxr": {
+      "type": "featured-collection",
+      "name": "Featured Collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "sleep-token-collection",
+        "products_limit": 4
+      }
     }
   },
   "order": [
     "template",
-    "contact_form_b3pTae"
+    "contact_form_b3pTae",
+    "featured_collection_pdTYxr"
   ]
 }
