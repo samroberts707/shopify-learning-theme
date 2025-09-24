@@ -12,8 +12,9 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Collection",
-        "featured_collection": "summer-collection"
+        "title": "Sleep Token Collection",
+        "featured_collection": "sleep-token-collection",
+        "products_limit": 4
       }
     }
   },
